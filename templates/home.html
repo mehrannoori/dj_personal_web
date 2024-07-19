@@ -1,7 +1,9 @@
 {% extends "_base.html" %}
+{% load static %}
 
 {% block title %} Home Page {% endblock title %}
 
 {% block content %}
     <h1>This is our home page</h1>
+    <img style="width: 200px;" src="{% static 'images/bio.jpg' %}">
 {% endblock content %}
