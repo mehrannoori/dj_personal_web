@@ -1,0 +1,13 @@
+{% extends '_base.html' %}
+
+{% block title %}
+    Delete Message
+{% endblock title %}
+
+{% block content %}
+    <h1 style="color: red;">Delete Message</h1>
+    <form action="" method="post">{% csrf_token %}
+        <p>Are you sure you want to delete message?</p>
+        <button class="btn btn-danger" type="submit">Delete</button>
+    </form>
+{% endblock content %}

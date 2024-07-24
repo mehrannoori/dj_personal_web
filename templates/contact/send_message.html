@@ -1,0 +1,17 @@
+{% extends "_base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block title %} Sent Messages {% endblock title %}
+
+{% block content %}
+<a href="{% url 'list_message' %}">Messages List</a>
+<div class="container" style="width: 50%;">
+    <h1>Send Messages</h1>
+    <form method="post">{% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" class="btn btn-success" value="Send"></button>
+    </form>
+</div>
+
+{% endblock content %}

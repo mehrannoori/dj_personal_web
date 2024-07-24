@@ -1,0 +1,16 @@
+{% extends "_base.html" %}
+{% load static %}
+
+{% block title %} Messages {% endblock title %}
+
+{% block content %}
+    <h1>Messages</h1>
+    {% for message in messages %}
+    <div class="container p-4">
+        <p>{{ message.name }}</p>
+        <p> {{ message.email }} </p>
+        <p> {{ message.message }} </p>
+        <a href="{% url 'delete_message' message.pk %}">- Delete</a>
+    </div>
+    {% endfor %}
+{% endblock content %}

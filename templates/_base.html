@@ -25,6 +25,9 @@
                         <li class="nav-item">
                           <a class="nav-link" href="{% url 'blog' %}">Blog</a>
                         </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'send_message' %}">Contact Us</a>
+                        </li>
                         {% if user.is_authenticated %}
                         <li class="nav-item">
                           <form method="post" action="{% url 'logout' %}">{% csrf_token %}<button class="btn btn-danger mx-1" type="submit">Log Out</button></form>

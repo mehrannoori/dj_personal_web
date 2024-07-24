@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-*&)vt_s71w*k=#)3p4&6rkd45r^6@%l$9zkf9&y1+h@-brgnz8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'accounts.apps.AccountsConfig',
     'blog.apps.BlogConfig',
+    'contact.apps.ContactConfig',
 ]
 
 MIDDLEWARE = [
